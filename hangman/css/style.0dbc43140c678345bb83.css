@@ -104,7 +104,7 @@ body {
 .hangman__main {
   display: flex;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   .hangman__main {
     display: block;
   }
