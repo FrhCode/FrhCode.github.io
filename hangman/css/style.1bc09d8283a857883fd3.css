@@ -41,23 +41,30 @@ textarea {
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
 }
 /*!**********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/js/App.scss ***!
   \**********************************************************************************************************/
+.App {
+  position: relative;
+}
+
 .result {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   background-color: rgba(255, 0, 0, 0.466);
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  top: 0;
   z-index: 10;
   text-align: center;
   padding-top: 20%;
 }
 .result--show {
-  display: block;
+  opacity: 100%;
+  visibility: visible;
+  position: fixed;
+  bottom: 0;
 }
 .result--win {
   background-color: rgba(0, 255, 34, 0.534);
@@ -87,7 +94,8 @@ body {
   \********************************************************************************************************************************/
 .hangman {
   padding: 2rem 1rem;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
 }
 .hangman__title {
@@ -97,6 +105,11 @@ body {
 }
 .hangman__main {
   display: flex;
+}
+@media screen and (max-width: 300px) {
+  .hangman__main {
+    display: block;
+  }
 }
 .hangman__qna {
   flex: 1;

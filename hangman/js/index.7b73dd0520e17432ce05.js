@@ -69,6 +69,7 @@ var App = /*#__PURE__*/function (_React$Component) {
           gameOver: true
         };
       });
+      document.querySelector("body").style.overflow = "hidden";
     }
   }, {
     key: "gameWin",
@@ -79,6 +80,7 @@ var App = /*#__PURE__*/function (_React$Component) {
           gameOver: true
         };
       });
+      document.querySelector("body").style.overflow = "hidden";
     }
   }, {
     key: "render",
